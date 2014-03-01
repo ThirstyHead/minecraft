@@ -9,6 +9,13 @@ application {
     //frameClass = 'javax.swing.JFrame'
 }
 mvcGroups {
+    // MVC Group for "filePanel"
+    'filePanel' {
+        model      = 'minecraft.FilePanelModel'
+        view       = 'minecraft.FilePanelView'
+        controller = 'minecraft.FilePanelController'
+    }
+
     // MVC Group for "minecraft"
     'minecraft' {
         model      = 'minecraft.MinecraftModel'

@@ -16,8 +16,8 @@ actions {
 
 
 fileChooserWindow = fileChooser()
-options = [title:'GroovyEdit', 
-           size: [480,320],
+options = [title:'ModCraft', 
+           size: [800,600],
            locationByPlatform:true,
            iconImage: imageIcon('/griffon-icon-48x48.png').image,
            iconImages: [imageIcon('/griffon-icon-48x48.png').image,
