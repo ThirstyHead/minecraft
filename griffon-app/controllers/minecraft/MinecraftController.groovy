@@ -27,4 +27,9 @@ class MinecraftController {
     JOptionPane.showMessageDialog(app.windowManager.windows.find{it.focused}, 
                                   "Your IP Address: " + InetAddress.localHost.hostAddress);
   }
+
+  def showHome = {
+    JOptionPane.showMessageDialog(app.windowManager.windows.find{it.focused}, 
+                                  "Your Home Directory: " + System.getProperty("user.home") ); 
+  }
 }

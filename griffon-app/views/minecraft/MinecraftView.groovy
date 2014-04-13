@@ -14,10 +14,17 @@ actions {
           closure: controller.quit)
 
    action(id: 'showAddressAction',
-          name: "Show Address",
-          mnemonic: "S",
-          accelerator: shortcut('S'),
+          name: "Show IP Address",
+          mnemonic: "A",
+          accelerator: shortcut('A'),
           closure: controller.showAddress)
+
+   action(id: 'showHomeAction',
+          name: "Show Home Dir",
+          mnemonic: "H",
+          accelerator: shortcut('H'),
+          closure: controller.showHome)
+
 }
 
 
@@ -39,6 +46,8 @@ fileViewerWindow = application(options) {
     }
     menu("Info") {
       menuItem showAddressAction
+      separator()
+      menuItem showHomeAction
     } 
   }
 
