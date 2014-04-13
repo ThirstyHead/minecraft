@@ -2,16 +2,22 @@ package minecraft
 
 actions {
    action(id: 'openAction',
-        name: 'Open',
-        mnemonic: 'O',
-        accelerator: shortcut('O'),
-        closure: controller.openFile)
+          name: 'Open',
+          mnemonic: 'O',
+          accelerator: shortcut('O'),
+          closure: controller.openFile)
 
    action(id: 'quitAction',
-      name: 'Quit',
-      mnemonic: 'Q',
-      accelerator: shortcut('Q'),
-      closure: controller.quit)
+          name: 'Quit',
+          mnemonic: 'Q',
+          accelerator: shortcut('Q'),
+          closure: controller.quit)
+
+   action(id: 'showAddressAction',
+          name: "Show Address",
+          mnemonic: "S",
+          accelerator: shortcut('S'),
+          closure: controller.showAddress)
 }
 
 
@@ -30,6 +36,9 @@ fileViewerWindow = application(options) {
       menuItem openAction
       separator()
       menuItem quitAction
+    }
+    menu("Info") {
+      menuItem showAddressAction
     } 
   }
 

@@ -1,6 +1,6 @@
 package minecraft
 
-import javax.swing.JFileChooser
+import javax.swing.*
 
 class MinecraftController {
   def view
@@ -21,5 +21,10 @@ class MinecraftController {
   
   def quit = {
     app.shutdown()
+  }
+
+  def showAddress = {
+    JOptionPane.showMessageDialog(app.windowManager.windows.find{it.focused}, 
+                                  "Your IP Address: " + InetAddress.localHost.hostAddress);
   }
 }
